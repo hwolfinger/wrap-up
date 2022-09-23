@@ -1,3 +1,4 @@
+
 console.log('hello')
 
 function prommycountry (response) {
@@ -17,12 +18,12 @@ function handler () {
     console.log(promi);
     // telling computer that when it is resolved, call prommy country
     promi.then(prommycountry);
-    console.log('i did it!');
+    console.log('i did it! see i kept my promise');
 }
-
+    /*
+    promi.forEach(element => {
+        var countryblob = country.push(promi.name)
+    });
+}
+*/
 document.addEventListener ('DOMContentLoaded', handler);
-
-
-/*
-fetch('https://xc-countries-api.herokuapp.com/api/countries/<country_code>/states/')
-//*/
