@@ -32,6 +32,10 @@ Long story short, you never know what you got until it's gone.  When I was in a 
 
 Ride in peace.  I just hope you're in a better place.
 
+**Ps. Update Sunday morning**
+I'm grateful at least one person in the world understands - thanks Kirkby for sharing this
+[![He gets it](https://img.youtube.com/vi/6T1tvyfcezI/0.jpg)](https://https://www.youtube.com/watch?v=6T1tvyfcezI)
+
 [//]: # "## Solutions"
 
 
