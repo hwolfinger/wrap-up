@@ -22,8 +22,15 @@ My colleagues repos:
 > 3. Once all of that is done, create a way to add a new country by sending a `POST` call to `https://xc-countries-api.herokuapp.com/api/countries/`
 > 4. Create a way to add new states by sending a `POST` call to `https://xc-countries-api.herokuapp.com/api/states/`
 
-[//]: # "## Challenges"
+## Challenges
+Challenges arose immediately.  I struggled for days on Step #2.  Biking home Friday evening was refreshing.  I love the bike lane on Wilson Blvd from Courthouse, through Clarendon, and via Fairfax Drive, to Ballston, but even the ride didn't fully clear my mind.  Then, when it seemed it couldn't get any worse, tragedy struck.  On Saturday my bike was stolen.
 
+Long story short, you never know what you got until it's gone.  When I was in a bad place, a friend gave that old Trek to me.
+
+**RIP TREK** 
+*February 16, 2022 - September 24, 2022*
+
+Ride in peace.  I just hope you're in a better place.
 
 [//]: # "## Solutions"
 
