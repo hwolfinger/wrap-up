@@ -6,10 +6,15 @@
     <script src="main.js"></script>
     <h2>wrap-up project</h2>
     <h4>country list</h4>
-    <select id="country" name="country">
-        <option value = "car">truck</option>
-        <option value = "bike">water</option>
-        <option value = "boat">red</option>
+    <hr />
+    <select id="country" name="country" onchange="populate('country', 'state')">
+        <option value = "Mars">Mars</option>
+        <option value = "Tatooine">Tatooine</option>
+        <option value = "Wakanda">Wakanda</option>
     </select>
     <p>please select a country.  thank you.</p>
+
+    <select id="state" name="state"></select>
+    <p>please select a country to populate state list.</p>
+    <hr />
 </body>

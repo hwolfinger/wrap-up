@@ -22,10 +22,23 @@ My colleagues repos:
 > 3. Once all of that is done, create a way to add a new country by sending a `POST` call to `https://xc-countries-api.herokuapp.com/api/countries/`
 > 4. Create a way to add new states by sending a `POST` call to `https://xc-countries-api.herokuapp.com/api/states/`
 
-[//]: # "## Challenges"
+## Challenges
+Challenges arose immediately.  I struggled for days on Step #2.  Biking home Friday evening was refreshing.  I love the bike lane on Wilson Blvd from Courthouse, through Clarendon, and via Fairfax Drive, to Ballston, but even the ride didn't fully clear my mind.  Then, when it seemed it couldn't get any worse, tragedy struck.  On Saturday my bike was stolen.
 
+Long story short, you never know what you got until it's gone.  When I was in a bad place, a friend gave that old Trek to me.
 
-[//]: # "## Solutions"
+**RIP TREK** 
+*February 16, 2022 - September 24, 2022*
 
+Ride in peace.  I just hope you're in a better place.
+
+**Ps. Update Sunday morning**
+
+[![He gets it](https://img.youtube.com/vi/6T1tvyfcezI/0.jpg)](https://www.youtube.com/watch?v=6T1tvyfcezI)
+
+I'm grateful at least one person in the world understands
+
+## Solutions
+I noodled on the project over the weekend and stumbled on Bootstrap.  [Thank you Liz!](https://youtu.be/AaVy9UR30Dc)  This took care of my CSS, and allowed me to refactor my code; however, I was still having issues because I wasn't completely understanding how to access .json objects and overall methods, and arrays.  I had to regroup and build a better base of knowledge on the basics.
 
 [//]: # "## TIL"
