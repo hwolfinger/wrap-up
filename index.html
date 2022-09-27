@@ -1,20 +1,48 @@
 <!DOCTYPE html>
+
 <head>
     <title>countries and state</title>
-</head>
-<body>
-    <script src="main.js"></script>
-    <h2>wrap-up project</h2>
-    <h4>country list</h4>
-    <hr />
-    <select id="country" name="country" onchange="populate('country', 'state')">
-        <option value = "Mars">Mars</option>
-        <option value = "Tatooine">Tatooine</option>
-        <option value = "Wakanda">Wakanda</option>
-    </select>
-    <p>please select a country.  thank you.</p>
 
-    <select id="state" name="state"></select>
-    <p>please select a country to populate state list.</p>
-    <hr />
+    <!-- https://getbootstrap.com/#:~:text=additional%20package%20managers.-,Include%20via%20CDN,-When%20you%20only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- https://getbootstrap.com/docs/5.2/getting-started/introduction/ -->
+    <div class="container">
+        <h1>Wrap-Up Project</h1>
+
+        <h2>Countries & States</h2>
+        <p>Select a country first, then the States list will be populated.</p>
+        <div class="row mb-3">
+            <label for="countryList" class="form-label">Countries</label>
+            <select id="countryList" class="form-select">
+                <option value="" disabled selected>Select a country</option>
+            </select>
+        </div>
+        <div class="row mb-3">
+            <label for="newCountryInput" class="form-label">Add new country:</label>
+            <input type="text" id="newCountryInput" class="form-control" placeholder="Add or Invent a new country...">
+        </div>
+        <div class="row mb-3">
+            <button type="button" class="btn btn-primary" id="newCountryButton">Create Country</button>
+        </div>
+        <div class="row mb-3">
+            <label for="stateList" class="form-label">States</label>
+            <select id="stateList" class="form-select">
+                <option value="" disabled selected>Select a state</option>
+            </select>
+        </div>
+        <div class="row mb-3">
+            <label for="newStateInput" class="form-label">Add new state:</label>
+            <input type="text" id="newStateInput" class="form-control" placeholder="Add or Invent a new state...">
+        </div>
+        <div class="row mb-3">
+            <button type="button" class="btn btn-primary" id="newStateButton">Create State</button>
+        </div>
+    </div>
+
+    <!-- when scripts need to manipulate DOM, you generally load them last-->
+    <script src="main.js"></script>
 </body>
