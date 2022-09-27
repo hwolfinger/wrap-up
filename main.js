@@ -43,19 +43,30 @@ function submitNewCountry() {
 
 }
 
+//clear stateList if there is anything in it
+function removeOptions(stateList) {
+    var i, L = stateList.options.length - 1;
+    for(i = L; i >= 0; i--) {
+        stateList.remove(i);
+}
+}
 
 function loadStates() {
     console.log("loadStates console: " + countryList.value)
-    
+    //  clear the dropdown list by calling the removeOptions function
+    if (stateList.options.length > 0) {
+        removeOptions(document.getElementById('stateList'));
+    }
+
     let selectedCountry = countryList.value;
+      
     fetch('https://xc-countries-api.herokuapp.com/api/countries/'+selectedCountry+'/states/')
         .then((response) => response.json())
         .then((states) => {
-            // clear the dropdown list
-            document.getElementById(stateList).options.length = 0;
-            states.forEach(state => {
+                states.forEach(state => {
                 // console.log(state)
                 stateList.options[stateList.options.length] = new Option(state.name, state.code);
+        console.log(stateList.length)
             });
         })
 }
