@@ -51,4 +51,9 @@ I searched for a way to clear the list, inserting a new function within the `loa
 
 <img src="https://media.giphy.com/media/IwAZ6dvvvaTtdI8SD5/giphy.gif" />
 
+## Step 3
+Envisioning: add a new country and a box pops up to request the country code.
+
+
+
 [//]: # "## TIL"

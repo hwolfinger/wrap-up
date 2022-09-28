@@ -33,6 +33,24 @@ function submitNewCountry() {
     // clear out the field on successful POST
     newCountryInput.value = '';
 
+    // create object variable for newCountry
+    let newCountry = {
+        name: newCountryName,
+        code: ""
+    }
+    console.log(newCountry);
+
+//     fetch('https://xc-countries-api.herokuapp.com/api/countries/' , {
+//         method: 'POST' ,
+//         headers: {
+//             'Content-Type': 'application/json' ,
+//         } ,
+//         body: JSON.stringify(newCountry) ,
+//     })
+
+//     .then((response) => response.json());
+//     .then(data => console.log(data));
+}
     // // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     // fetch('https://httpbin.org/post', {
     //     method: 'POST',
@@ -41,14 +59,13 @@ function submitNewCountry() {
     //     .then((response) => response.json())
     //     .then(data => console.log(data));
 
-}
 
 //clear stateList if there is anything in it
 function removeOptions(stateList) {
     var i, L = stateList.options.length - 1;
     for(i = L; i >= 0; i--) {
         stateList.remove(i);
-}
+    }
 }
 
 function loadStates() {
