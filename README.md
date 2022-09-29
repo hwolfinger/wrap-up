@@ -16,7 +16,7 @@ My colleagues' repos:
 
 ## Objective
 > Your wrap-up exercise for your onboarding is to make a website (can be just a single HTML page) that will use JavaScript to get data from an external REST API.  The details are as follows:
-
+>
 > 1. When the page loads, populate a dropdown menu with the results from a `GET` call to `https://xc-countries-api.herokuapp.com/api/countries/`
 > 2. When a country is selected from the country dropdown, populate a second dropdown with the results from a `GET` call to `https://xc-countries-api.herokuapp.com/api/countries/<country_code>/states/`
 > 3. Once all of that is done, create a way to add a new country by sending a `POST` call to `https://xc-countries-api.herokuapp.com/api/countries/`
@@ -30,7 +30,7 @@ I struggled for days on Step #2.  Biking home Friday evening was refreshing.  I 
 
 Long story short, you never know what you [got til it's gone](https://www.youtube.com/watch?v=uIhJvYScvnE).  When I was in a bad place, a friend gave that old Trek to me.
 
-**RIP TREK** 
+**RIP TREK**  
 **_February 16, 2022 - September 24, 2022_**
 
 Ride in peace.  I just hope you're in a better place.
@@ -70,5 +70,10 @@ Then i took a look at what the states API was providing and noticed the `country
 I realized i hadn't gone through any envisioning.  Did i want the site to automatically associate states with whatever country was selected above?  Then, what if i country wasn't selected?  Did i want the site to ask the user what state their input should be associated to?  That would be a cool box...
 
 First things first though: I hard coded `countryId: 3` (United States) in order to test if things worked...
+
+It didn't work...
+I made some changes.  Still nothing.  A few more tweaks, nope.  Huddling with Sandy and Josh helped me understand better a few different approaches, but it was clear my foundation about .json objects was still shaky.  Even when i strung .methods together, I wasn't completely grasping what i was doing and I think why what i wanted to do wasn't working.
+
+Fast forward: by the end of the day, I still hadn't figured out how to access the selected country's id so i could pass it into my json object for my fetch...?  What was i doing wrong...?
 
 [//]: # "## TIL"

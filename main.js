@@ -4,7 +4,7 @@ const newCountryInput = document.getElementById('newCountryInput');
 const newCountryCodeInput = document.getElementById('newCountryCodeInput');
 const newStateButton = document.getElementById('newStateButton');
 const newStateInput = document.getElementById('newStateInput');
-const newStateCodeInput = document.getElementById('newStateInput');
+const newStateCodeInput = document.getElementById('newStateCodeInput');
 
 console.log(countryList)
 
@@ -19,6 +19,7 @@ function loadCountries() {
             countries.forEach(country => {
                 // https://memorynotfound.com/dynamically-add-remove-options-select-javascript/
                 countryList.options[countryList.options.length] = new Option(country.name, country.code);
+                // console.log("loadCountry console: " + country.id);
             });
         });
 }
@@ -72,7 +73,7 @@ function removeOptions(stateList) {
 }
 
 function loadStates() {
-    console.log("loadStates console: " + countryList.value)
+    console.log("loadStates console (value): " + countryList.value)
     //  clear the dropdown list by calling the removeOptions function
     if (stateList.options.length > 0) {
         removeOptions(document.getElementById('stateList'));
@@ -93,36 +94,42 @@ function loadStates() {
 
 function submitNewState() {
     // this uses submitNewCountry as its basis
-    // please note - as i am doing this, i am wondering how to associate the state with the proper country - i am thinking i need to figure out what country the state is for and leverage the countryId property
+    // please note - when i first approached this, i wondered how to associate the state with the proper country - i thought to myself "i need to figure out what country the state is for and leverage the countryId property..." then i realized (was shown) that the countryID property in the state api get = the id in the countries api get 
     
+    // first, i want to associate this input with the Country selected above
+    let countrySelected = document.getElementById('countryList').value
+    console.log("Selected = " + countrySelected)
+    // console.log("This is the countryId selected: " + countrySelected)
+
     // grab value from input field
     let newStateName = newStateInput.value;
     let newStateCodeName = newStateCodeInput.value;
-    
-    console.log("POST data API using: " + newStateName);
+
+    console.log("POST data API using: " + newStateName + " / Code: " + newStateCodeName);
 
     // clear out the field on successful POST
     newStateInput.value = '';
     newStateCodeInput.value = '';
 
-    // create object variable for newCountry
+    // create object variable for newState
+    // countryId is pointing to countryList, using the .`options` method and then using the `selectedIndex method to pull the id property (at least that's what i want it to do)
     let newState = {
         name: newStateName,
         code: newStateCodeName,
-        countryId: 3,
+        countryId: countryList.options[countryList.selectedIndex].id,
     }
     console.log(newState);
 
-    fetch('https://xc-countries-api.herokuapp.com/api/states/' , {
-        method: 'POST' ,
-        headers: {
-            'Content-Type': 'application/json' ,
-        } ,
-        body: JSON.stringify(newState) ,
-    })
+    // fetch('https://xc-countries-api.herokuapp.com/api/states/' , {
+    //     method: 'POST' ,
+    //     headers: {
+    //         'Content-Type': 'application/json' ,
+    //     } ,
+    //     body: JSON.stringify(newState) ,
+    // })
 
-    .then((response) => response.json())
-    .then(data => console.log(data));
+    // .then((response) => response.json())
+    // .then(data => console.log(data));
 }
 
 document.addEventListener('DOMContentLoaded', loadCountries);
