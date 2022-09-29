@@ -4,6 +4,7 @@ const newCountryInput = document.getElementById('newCountryInput');
 const newCountryCodeInput = document.getElementById('newCountryCodeInput');
 const newStateButton = document.getElementById('newStateButton');
 const newStateInput = document.getElementById('newStateInput');
+const newStateCodeInput = document.getElementById('newStateInput');
 
 console.log(countryList)
 
@@ -91,10 +92,36 @@ function loadStates() {
 }
 
 function submitNewState() {
+    // this uses submitNewCountry as its basis
+    // please note - as i am doing this, i am wondering how to associate the state with the proper country - i am thinking i need to figure out what country the state is for and leverage the countryId property
+    
     // grab value from input field
     let newStateName = newStateInput.value;
 
     console.log("POST data API using: " + newStateName);
+
+    // clear out the field on successful POST
+    newStateInput.value = '';
+    newStateCodeInput.value = '';
+
+    // create object variable for newCountry
+    let newState = {
+        name: newStateName,
+        code: newStateCodeName,
+        countryId: 3,
+    }
+    console.log(newState);
+
+    fetch('https://xc-countries-api.herokuapp.com/api/states/' , {
+        method: 'POST' ,
+        headers: {
+            'Content-Type': 'application/json' ,
+        } ,
+        body: JSON.stringify(newState) ,
+    })
+
+    .then((response) => response.json())
+    .then(data => console.log(data));
 }
 
 document.addEventListener('DOMContentLoaded', loadCountries);

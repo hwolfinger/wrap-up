@@ -14,39 +14,47 @@
         <h1>Wrap-Up Project</h1>
 
         <h2>Countries & States</h2>
-        <p>Select a country first, then the States list will be populated.  Feel free to add your own country (make sure to include country code) if you do not see the one you are looking for on the list.</p>
+        <p>Select a country first, then the States list will be populated.  Feel free to add your own country (just make sure to include country code or it will not post) if you do not see the one you are looking for on the list.</p>
         <img src="https://media.giphy.com/media/BQAxe3vIbgQKszyaHP/giphy.gif" alt="globe GIF" width="100%">
+        <br>
+
         <div class="row mb-3">
-            <label for="countryList" class="form-label">Countries</label>
+            <label for="countryList" class="form-label"><b>Countries</b></label>
             <select id="countryList" class="form-select">
                 <option value="" disabled selected>Select a country</option>
             </select>
         </div>
         <div class="row mb-3">
-            <label for="newCountryInput" class="form-label">Add new country:</label>
+            <label for="newCountryInput" class="form-label"><b>Add new country:</b></label>
             <input type="text" id="newCountryInput" class="form-control" placeholder="Add or Invent a new country...">
         </div>
         <div class="row mb-3">
-            <label for="newCountyCodeInput" class="form-label">Please include country code:</label>
+            <label for="newCountyCodeInput" class="form-label"><b>Please include country code:</b></label>
             <input type="text" id="newCountryCodeInput" class="form-control" placeholder="Country code ideally should be two characters...">
         </div>
         <div class="row mb-3">
-            <button type="button" class="btn btn-primary" id="newCountryButton">Create Country</button>
+            <button type="button" class="btn btn-primary" id="newCountryButton"><b>Create Country</b></button>
         </div>
         <div class="row mb-3">
-            <label for="stateList" class="form-label">States</label>
+            <label for="stateList" class="form-label"><b>States</b></label>
             <select id="stateList" class="form-select">
                 <option value="" disabled selected>Select a state</option>
             </select>
         </div>
         <div class="row mb-3">
-            <label for="newStateInput" class="form-label">Add new state:</label>
+            <label for="newStateInput" class="form-label"><b>Add new state:</b></label>
             <input type="text" id="newStateInput" class="form-control" placeholder="Add or Invent a new state...">
+        </div>
+        <div class="row mb-3">
+            <label for="newStateCodeInput" class="form-label"><b>Add new state:</b></label>
+            <input type="text" id="newStateCodeInput" class="form-control" placeholder="State code ideally should be two characters...">
         </div>
         <div class="row mb-3">
             <button type="button" class="btn btn-primary" id="newStateButton">Create State</button>
         </div>
-        <p>to everyone: thank you for all the help, i truly appreciate it. this is the <a href="https://github.com/hwolfinger/wrap-up">wrap-up repo link</a></p>
+        
+        <br>
+        <p>to everyone: thank you for all the help, i truly appreciate it. <br>this is the <b><a href="https://github.com/hwolfinger/wrap-up">wrap-up repo link</a></b></p>
     </div>
 
     <!-- when scripts need to manipulate DOM, you generally load them last-->

@@ -62,4 +62,13 @@ Things felt like they were coming together.  I pushed and checked my code.  The 
 
 <img src="https://media.giphy.com/media/kyLYXonQYYfwYDIeZl/giphy.gif" />
 
+## Step 4
+I was positive that the last step would take just a few minutes.  I mean, it was just the same as Step 3 right?  I grabbed the code and prepared to copy-paste.
+
+Then i took a look at what the states API was providing and noticed the `countryId` property.  How would i associate the state with the countryId?
+
+I realized i hadn't gone through any envisioning.  Did i want the site to automatically associate states with whatever country was selected above?  Then, what if i country wasn't selected?  Did i want the site to ask the user what state their input should be associated to?  That would be a cool box...
+
+First things first though: I hard coded `countryId: 3` (United States) in order to test if things worked...
+
 [//]: # "## TIL"
