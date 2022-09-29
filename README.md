@@ -58,6 +58,8 @@ Matt helped me get troubleshoot my initial function issues; much like with Brian
 
 He also showed me the api, which was super cool.  We talked and when he left, he told me that instead of jumping directly to the pop-up box, just add another input field for the country code, and wire the function.
 
-Things felt like they were coming together.
+Things felt like they were coming together.  I pushed and checked my code.  The `console.log` was capturing everything, so I uncommented the `fetch` lines and set sight on the next step.
+
+<img src="https://media.giphy.com/media/kyLYXonQYYfwYDIeZl/giphy.gif" />
 
 [//]: # "## TIL"

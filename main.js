@@ -29,8 +29,7 @@ function submitNewCountry() {
 
     console.log("POST data to API using: " + newCountryName);
 
-    // TODO derive country code from name
-    // or create additional form field to supply country code
+    // TODO derive country code from name (how would or could this be done?)
 
     // clear out the field on successful POST
     newCountryInput.value = '';
@@ -43,16 +42,16 @@ function submitNewCountry() {
     }
     console.log(newCountry);
 
-//     fetch('https://xc-countries-api.herokuapp.com/api/countries/' , {
-//         method: 'POST' ,
-//         headers: {
-//             'Content-Type': 'application/json' ,
-//         } ,
-//         body: JSON.stringify(newCountry) ,
-//     })
+    fetch('https://xc-countries-api.herokuapp.com/api/countries/' , {
+        method: 'POST' ,
+        headers: {
+            'Content-Type': 'application/json' ,
+        } ,
+        body: JSON.stringify(newCountry) ,
+    })
 
-//     .then((response) => response.json());
-//     .then(data => console.log(data));
+    .then((response) => response.json())
+    .then(data => console.log(data));
 }
     // // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     // fetch('https://httpbin.org/post', {
