@@ -54,6 +54,10 @@ I searched for a way to clear the list, inserting a new function within the `loa
 ## Step 3
 Envisioning: add a new country and a box pops up to request the country code.
 
+Matt helped me get troubleshoot my initial function issues; much like with Brian, we commented out a bunch of code and inserted a `console.log` to see what was going on.  Matt identified immediately that I was not passing the .json object to the API correctly, so we created an object variable that took the `name` from the `newCountryInput` value.
 
+He also showed me the api, which was super cool.  We talked and when he left, he told me that instead of jumping directly to the pop-up box, just add another input field for the country code, and wire the function.
+
+Things felt like they were coming together.
 
 [//]: # "## TIL"

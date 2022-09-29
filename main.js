@@ -1,6 +1,7 @@
 const countryList = document.getElementById('countryList');
 const newCountryButton = document.getElementById('newCountryButton');
 const newCountryInput = document.getElementById('newCountryInput');
+const newCountryCodeInput = document.getElementById('newCountryCodeInput');
 const newStateButton = document.getElementById('newStateButton');
 const newStateInput = document.getElementById('newStateInput');
 
@@ -24,6 +25,7 @@ function loadCountries() {
 function submitNewCountry() {
     // grab value from input field
     let newCountryName = newCountryInput.value;
+    let newCountryCodeName = newCountryCodeInput.value;
 
     console.log("POST data to API using: " + newCountryName);
 
@@ -32,11 +34,12 @@ function submitNewCountry() {
 
     // clear out the field on successful POST
     newCountryInput.value = '';
+    newCountryCodeInput.value = '';
 
     // create object variable for newCountry
     let newCountry = {
         name: newCountryName,
-        code: ""
+        code: newCountryCodeName,
     }
     console.log(newCountry);
 
