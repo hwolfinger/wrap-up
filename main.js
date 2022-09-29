@@ -97,7 +97,8 @@ function submitNewState() {
     
     // grab value from input field
     let newStateName = newStateInput.value;
-
+    let newStateCodeName = newStateCodeInput.value;
+    
     console.log("POST data API using: " + newStateName);
 
     // clear out the field on successful POST
