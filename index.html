@@ -11,21 +11,28 @@
 <body>
     <!-- https://getbootstrap.com/docs/5.2/getting-started/introduction/ -->
     <div class="container">
-        <h1>Wrap-Up Project</h1>
-
-        <h2>Countries & States</h2>
+        <h1>Wrap-Up Project (Countries & States)</h1>
+        
         <p>Select a country first, then the States list will be populated.  Feel free to add your own country (just make sure to include country code or it will not post) if you do not see the one you are looking for on the list.</p>
         <p>The ability to add states coming soon!</p>
         
         <img src="https://media.giphy.com/media/BQAxe3vIbgQKszyaHP/giphy.gif" alt="globe GIF" width="100%">
         <br/>
         <br/>
+        <h2>Countries (Step 1) & States (Step 2)</h2>
         <div class="row mb-3">
             <label for="countryList" class="form-label"><b>Countries</b></label>
             <select id="countryList" class="form-select">
                 <option value="" disabled selected>Select a country</option>
             </select>
         </div>
+        <div class="row mb-3">
+            <label for="stateList" class="form-label"><b>States</b></label>
+            <select id="stateList" class="form-select">
+                <option value="" disabled selected>Select a state</option>
+            </select>
+        </div>
+        <h2>New Countries (Step 3)</h2>
         <div class="row mb-3">
             <label for="newCountryInput" class="form-label"><b>Add new country:</b></label>
             <input type="text" id="newCountryInput" class="form-control" placeholder="Add or Invent a new country...">
@@ -37,12 +44,7 @@
         <div class="row mb-3">
             <button type="button" class="btn btn-primary" id="newCountryButton"><b>Create Country</b></button>
         </div>
-        <div class="row mb-3">
-            <label for="stateList" class="form-label"><b>States</b></label>
-            <select id="stateList" class="form-select">
-                <option value="" disabled selected>Select a state</option>
-            </select>
-        </div>
+        <h2>New States (Step 4)</h2>
         <div class="row mb-3">
             <label for="newStateInput" class="form-label"><b>Add new state:</b></label>
             <input type="text" id="newStateInput" class="form-control" placeholder="Add or Invent a new state...">
