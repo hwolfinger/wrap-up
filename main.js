@@ -8,6 +8,13 @@ const newStateCodeInput = document.getElementById('newStateCodeInput');
 
 console.log(countryList)
 
+// sort function for Country and State lists
+function compareNames(a, b) {
+    if (a.name < b.name) return -1;
+    if (a.name < b.name) return 1;
+    return 0;
+}
+
 function loadCountries() {
     // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     fetch('https://xc-countries-api.herokuapp.com/api/countries/')
@@ -84,12 +91,14 @@ function loadStates() {
     fetch('https://xc-countries-api.herokuapp.com/api/countries/'+selectedCountry+'/states/')
         .then((response) => response.json())
         .then((states) => {
-                states.forEach(state => {
+            // sort states alphabetically as they are added
+            states.sort(compareNames);    
+            states.forEach(state => {
                 // console.log(state)
-                stateList.options[stateList.options.length] = new Option(state.name, state.code);
-        console.log(stateList.length)
-            });
-        })
+                stateList.options[stateList.options.length] = new Option(state.name, state.code)
+                console.log(stateList.length);
+        });
+    })
 }
 
 function submitNewState() {
