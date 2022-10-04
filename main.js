@@ -5,6 +5,7 @@ const newCountryCodeInput = document.getElementById('newCountryCodeInput');
 const newStateButton = document.getElementById('newStateButton');
 const newStateInput = document.getElementById('newStateInput');
 const newStateCodeInput = document.getElementById('newStateCodeInput');
+const countryListState = document.getElementById('countryListState');
 
 console.log(countryList)
 
@@ -29,6 +30,18 @@ function loadCountries() {
                 countryList.options[countryList.options.length] = new Option(country.name, country.code);
                 // console.log("loadCountry console: " + country.id);
             });
+        });
+}
+
+function loadCountryListState() {
+    fetch('https://xc-countries-api.herokuapp.com/api/countries/')
+        .then((response) => response.json())
+        .then((countries) => {
+            console.log("Country List (State):" + countries);
+            countries.sort(compareNames)
+            countries.forEach(country => {
+                countryListState.options[countryListState.options.length] = new Option(country.name, country.id);
+                });
         });
 }
 
@@ -107,13 +120,14 @@ function submitNewState() {
     // please note - when i first approached this, i wondered how to associate the state with the proper country - i thought to myself "i need to figure out what country the state is for and leverage the countryId property..." then i realized (was shown) that the countryID property in the state api get = the id in the countries api get 
     
     // first, i want to associate this input with the Country selected above
-    let countrySelected = document.getElementById('countryList').value
+    let countrySelected = document.getElementById('countryListState').value
     console.log("Selected = " + countrySelected)
     // console.log("This is the countryId selected: " + countrySelected)
 
     // grab value from input field
     let newStateName = newStateInput.value;
     let newStateCodeName = newStateCodeInput.value;
+    let newStateCountryCode = countryListState.value;
 
     console.log("POST data API using: " + newStateName + " / Code: " + newStateCodeName);
 
@@ -126,23 +140,27 @@ function submitNewState() {
     let newState = {
         name: newStateName,
         code: newStateCodeName,
-        countryId: countryList.options[countryList.selectedIndex].id,
+        countryId: newStateCountryCode,
     }
     console.log(newState);
 
-    // fetch('https://xc-countries-api.herokuapp.com/api/states/' , {
-    //     method: 'POST' ,
-    //     headers: {
-    //         'Content-Type': 'application/json' ,
-    //     } ,
-    //     body: JSON.stringify(newState) ,
-    // })
+    let selectedCountry = countrySelected;
+    console.log("selectedCountry = " + selectedCountry)
 
-    // .then((response) => response.json())
-    // .then(data => console.log(data));
+    fetch('https://xc-countries-api.herokuapp.com/api/countries/'+selectedCountry+'/states/' , {
+        method: 'POST' ,
+        headers: {
+            'Content-Type': 'application/json' ,
+        } ,
+        body: JSON.stringify(newState) ,
+    })
+
+    .then((response) => response.json())
+    .then(data => console.log(data));
 }
 
 document.addEventListener('DOMContentLoaded', loadCountries);
+document.addEventListener('DOMContentLoaded', loadCountryListState);
 countryList.addEventListener('change', loadStates);
 newCountryButton.addEventListener('click', submitNewCountry);
 newStateButton.addEventListener('click', submitNewState);
