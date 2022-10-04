@@ -23,6 +23,7 @@ function loadCountries() {
         // get the second promise, which resolves with the parsed text
         .then((countries) => {
             console.log(countries);
+            countries.sort(compareNames)
             countries.forEach(country => {
                 // https://memorynotfound.com/dynamically-add-remove-options-select-javascript/
                 countryList.options[countryList.options.length] = new Option(country.name, country.code);
