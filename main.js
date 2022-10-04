@@ -147,7 +147,7 @@ function submitNewState() {
     let selectedCountry = countrySelected;
     console.log("selectedCountry = " + selectedCountry)
 
-    fetch('https://xc-countries-api.herokuapp.com/api/countries/'+selectedCountry+'/states/' , {
+    fetch('https://xc-countries-api.herokuapp.com/api/states/' , {
         method: 'POST' ,
         headers: {
             'Content-Type': 'application/json' ,
