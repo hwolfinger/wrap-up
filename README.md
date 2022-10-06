@@ -1,5 +1,8 @@
 # Countries and States Project
 
+## Update
+This project was completed.
+
 ## Overview
 First off thank you Alan, thank you Nancy and thank you Brian.  
 Also, thanks Dave, Matt, Lance and Will for lending your time and energy to answering our questions and providing resources and encouragement to us through Slack.
@@ -75,5 +78,7 @@ It didn't work...
 I made some changes.  Still nothing.  A few more tweaks, nope.  Huddling with Sandy and Josh helped me understand better a few different approaches, but it was clear my foundation about .json objects was still shaky.  Even when i strung .methods together, I wasn't completely grasping what i was doing and I think why what i wanted to do wasn't working.
 
 Fast forward: by the end of the day, I still hadn't figured out how to access the selected country's id so i could pass it into my json object for my fetch...?  What was i doing wrong...?
+
+*Wrap-up to be continued...*
 
 [//]: # "## TIL"
